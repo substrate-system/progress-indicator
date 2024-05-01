@@ -1,6 +1,6 @@
 {
   "name": "@bicycle-codes/progress-indicator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "description": "Progress indicator implemented as a web component",
   "directories": {
