@@ -1,6 +1,3 @@
-import { createDebug } from '@nichoth/debug'
-const debug = createDebug()
-
 class ProgressIndicator extends HTMLElement {
     calculatedCircumference
 
@@ -123,7 +120,5 @@ class ProgressIndicator extends HTMLElement {
         }
     }
 }
-
-debug('progress', ProgressIndicator)
 
 customElements.define('progress-indicator', ProgressIndicator)
