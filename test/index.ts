@@ -1,7 +1,7 @@
 import { test } from '@bicycle-codes/tapzero'
-import { example } from '../src/index.js'
+import '../src/index.js'
 
-test('example', async t => {
-    t.ok('ok', 'should be an example')
-    example()
+test('Find the element', async t => {
+    const el = document.querySelector('progress-indicator')
+    t.ok(el, 'should find the element')
 })

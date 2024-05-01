@@ -8,7 +8,7 @@
     --progress-indicator-color-complete: var(--color-success);
     --progress-indicator-progress-stroke: var(--color-dark);
     --progress-indicator-bg-stroke: var(--color-dark-glare);
-}  
+}
 
 .progress-indicator {
     font-family: var(--font-base);
