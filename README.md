@@ -16,6 +16,12 @@ npm i -S @bicycle-codes/progress-indicator
 ## example
 See [./example/index.html](./example/index.html).
 
+See [the demonstration](https://bicycle-codes.github.io/progress-indicator/).
+
+![screenshot](image.png)
+
+![screenshot 100%](image-1.png)
+
 ## use
 
 ### JS
