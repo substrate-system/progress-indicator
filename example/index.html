@@ -6,7 +6,13 @@
     <title>Example</title>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <div id="root">
+      <progress-indicator progress="0" stroke="8" viewbox="130">
+        <div role="alert" aria-live="polite">
+          <p>Loading, please wait…</p>
+        </div>
+      </progress-indicator>
+    </div>
+    <script type="module" src="./index.ts"></script>
   </body>
 </html>

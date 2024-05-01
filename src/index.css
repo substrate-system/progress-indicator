@@ -1,0 +1,65 @@
+:root {
+    --font-base: "Space Mono", monospace;
+    --transition: 200ms linear;
+    --color-dark: #1f1a38;
+    --color-dark-glare: #989ea9;
+    --color-success: #76f7bf;
+  
+    --progress-indicator-color-complete: var(--color-success);
+    --progress-indicator-progress-stroke: var(--color-dark);
+    --progress-indicator-bg-stroke: var(--color-dark-glare);
+}  
+
+.progress-indicator {
+    font-family: var(--font-base);
+    line-height: 1.1;
+    color: var(--color-dark);
+    container-type: inline-size;
+    width: var(--progress-indicator-viewbox);
+    height: auto;
+}
+
+.progress-indicator__progress-circle {
+    stroke: var(--progress-indicator-progress-stroke, currentColor);
+    transition: stroke-dashoffset var(--transition);
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.progress-indicator__background-circle {
+    stroke: var(--progress-indicator-bg-stroke, grey);
+}
+
+.progress-indicator__check {
+    width: var(--progress-indicator-check-size, 60cqw);
+    height: auto;
+    display: none;
+}
+
+.progress-indicator__count {
+    font-size: var(--progress-indicator-count-size, max(25cqw, 1rem));
+    z-index: 1;
+}
+
+.progress-indicator__visual {
+    display: grid;
+    grid-template-areas: "stack";
+    align-items: center;
+    place-items: center;
+}
+  
+.progress-indicator__visual > * {
+    grid-area: stack;
+}
+
+[data-progress-state="complete"] .progress-indicator__progress-circle {
+    fill: var(--progress-indicator-color-complete);
+}
+  
+[data-progress-state="complete"] .progress-indicator__count {
+    display: none;
+}
+  
+[data-progress-state="complete"] .progress-indicator__check {
+    display: revert;
+}
