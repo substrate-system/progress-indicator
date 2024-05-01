@@ -36,7 +36,10 @@ customElements.define('progress-indicator', ProgressIndicator)
 So the only thing to do is import this file, or link to it in HTML, then you
 can use the tag in your HTML.
 
+#### copy
+
 First copy the file to a location accessible to your server:
+
 ```sh
 cp ./node_modules/@bicycle-codes/progress-indicator/dist/index.js ./public/progress-indicator.js
 ```
@@ -58,6 +61,15 @@ And now you can use the tag in your markup:
 </div>
 
 <script type="module" src="./progress-indicator.js"></script>
+```
+
+#### import
+If you are using a tool such as `vite`, you can just import, then use in
+your HTML.
+
+```js
+import '@bicycle-codes/progress-indicator'
+import '@bicycle-codes/progress-indicator/index.css'
 ```
 
 ### CSS
