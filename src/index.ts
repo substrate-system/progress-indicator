@@ -79,24 +79,24 @@ class ProgressIndicator extends HTMLElement {
             5)
     }
 
-    get label () {
+    get label ():string {
         return this.getAttribute('label') || 'Current progress'
     }
 
-    attributeChangedCallback (name, _, newValue) {
+    attributeChangedCallback (name:string, _oldValue, newValue:number):void {
         if (name === 'progress') {
             this.setProgress(newValue)
         }
     }
 
-    setProgress (percent) {
+    setProgress (percent:number) {
         // Always make sure the percentage passed never exceeds the max
         if (percent > 100) {
             percent = 100
         }
 
         // Set the aria role value for screen readers
-        this.setAttribute('aria-valuenow', percent)
+        this.setAttribute('aria-valuenow', '' + percent)
 
         const circle = this.querySelector('[data-progress-circle]') as
             HTMLElement
