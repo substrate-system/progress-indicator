@@ -1,5 +1,5 @@
 {
-  "name": "@bicycle-codes/progress-indicator",
+  "name": "@substrate-system/progress-indicator",
   "version": "0.0.2",
   "type": "module",
   "description": "Progress indicator implemented as a web component",
@@ -67,7 +67,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bicycle-codes/progress-indicator.git"
+    "url": "git+https://github.com/substrate-system/progress-indicator.git"
   },
   "keywords": [
     "progress",
@@ -75,7 +75,7 @@
     "component"
   ],
   "bugs": {
-    "url": "https://github.com/bicycle-codes/progress-indicator/issues"
+    "url": "https://github.com/substrate-system/progress-indicator/issues"
   },
-  "homepage": "https://github.com/bicycle-codes/progress-indicator"
+  "homepage": "https://github.com/substrate-system/progress-indicator"
 }

@@ -1,6 +1,6 @@
 # progress indicator
-![tests](https://github.com/bicycle-codes/progress-indicator/actions/workflows/nodejs.yml/badge.svg)
-[![types](https://img.shields.io/npm/types/@bicycle-codes/progress-indicator?style=flat-square)](README.md)
+![tests](https://github.com/substrate-system/progress-indicator/actions/workflows/nodejs.yml/badge.svg)
+[![types](https://img.shields.io/npm/types/@substrate-system/progress-indicator?style=flat-square)](README.md)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
 [![dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg?style=flat-square)](package.json)
@@ -11,13 +11,13 @@ See [an article on piccalil.li/blog](https://piccalil.li/blog/solution-009-progr
 ## install
 
 ```sh
-npm i -S @bicycle-codes/progress-indicator
+npm i -S @substrate-system/progress-indicator
 ```
 
 ## example
 See [./example/index.html](./example/index.html).
 
-See [the demonstration](https://bicycle-codes.github.io/progress-indicator/).
+See [the demonstration](https://substrate-system.github.io/progress-indicator/).
 
 ![screenshot](image.png)
 
@@ -41,7 +41,7 @@ can use the tag in your HTML.
 First copy the file to a location accessible to your server:
 
 ```sh
-cp ./node_modules/@bicycle-codes/progress-indicator/dist/index.js ./public/progress-indicator.js
+cp ./node_modules/@substrate-system/progress-indicator/dist/index.js ./public/progress-indicator.js
 ```
 
 Then add it to HTML:
@@ -68,8 +68,8 @@ If you are using a tool such as `vite`, you can just import, then use in
 your HTML.
 
 ```js
-import '@bicycle-codes/progress-indicator'
-import '@bicycle-codes/progress-indicator/index.css'
+import '@substrate-system/progress-indicator'
+import '@substrate-system/progress-indicator/index.css'
 ```
 
 ### CSS
@@ -79,7 +79,7 @@ Include the CSS also.
 #### copy
 
 ```sh
-cp ./node_modules/@bicycle-codes/progress-indicator/dist/index.css ./public/progress-indicator.css
+cp ./node_modules/@substrate-system/progress-indicator/dist/index.css ./public/progress-indicator.css
 ```
 
 #### link in HTML
@@ -93,5 +93,5 @@ If you are using a tool such as vite, add a link to the css from within
 your javascript.
 
 ```js
-import '@bicycle-codes/progress-indicator/index.css'
+import '@substrate-system/progress-indicator/index.css'
 ```
