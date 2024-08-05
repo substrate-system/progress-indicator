@@ -39,7 +39,7 @@
     "esbuild": "^0.23.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
-    "postcss-nesting": "^12.1.1",
+    "postcss-nesting": "^13.0.0",
     "preact": "^10.20.2",
     "tap-spec": "^5.0.0",
     "tape-run": "^11.0.0",
