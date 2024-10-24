@@ -11,6 +11,14 @@ See [an article on piccalil.li/blog](https://piccalil.li/blog/solution-009-progr
 
 <!-- toc -->
 
+- [install](#install)
+- [example](#example)
+- [use](#use)
+  * [JS](#js)
+  * [CSS](#css)
+
+<!-- tocstop -->
+
 ## install
 
 ```sh
