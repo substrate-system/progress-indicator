@@ -8,7 +8,7 @@ test('Find the element', async t => {
 })
 
 test('set the attribute', t => {
-    console.log('instance of', el instanceof ProgressIndicator)
+    console.log(el instanceof ProgressIndicator)
     el.setProgress(50)
     const progressCount = el.querySelector('[data-progress-count]') as
         HTMLElement

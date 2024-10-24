@@ -32,9 +32,8 @@ export class ProgressIndicator extends HTMLElement {
         return this.getAttribute('label') || 'Current progress'
     }
 
-    attributeChangedCallback (name:string, oldValue, newValue:number):void {
+    attributeChangedCallback (name:string, _oldValue, newValue:number):void {
         if (name === 'progress') {
-            if (oldValue === null) return
             this.setProgress(newValue)
         }
     }
@@ -107,6 +106,12 @@ export class ProgressIndicator extends HTMLElement {
             HTMLElement
         const progressCount = this.querySelector('[data-progress-count]') as
             HTMLElement
+
+        if (!circle) {
+            return setTimeout(() => {
+                this.setProgress(percent)
+            }, 0)
+        }
 
         // Calculate a dash offset value based on the calculated circumference
         // and the current percentage
