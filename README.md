@@ -9,6 +9,8 @@
 
 See [an article on piccalil.li/blog](https://piccalil.li/blog/solution-009-progress-indicator)
 
+<!-- toc -->
+
 ## install
 
 ```sh
@@ -23,6 +25,16 @@ See [the demonstration](https://substrate-system.github.io/progress-indicator/).
 ![screenshot](image.png)
 
 ![screenshot 100%](image-1.png)
+
+This takes an attribute `progress`, which is a percent number from 0 - 100.
+
+```html
+<progress-indicator progress="10">
+  <div role="alert" aria-live="polite">
+    <p>Loading, please wait…</p>
+  </div>
+</progress-indicator>
+```
 
 ## use
 
