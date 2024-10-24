@@ -93,7 +93,13 @@ export class ProgressIndicator extends HTMLElement {
       `
     }
 
-    setProgress (percent:number) {
+    setProgress (_percent:number|string) {
+        let percent:number
+        if (typeof _percent === 'string') {
+            percent = parseInt(_percent)
+        } else {
+            percent = _percent
+        }
         // Always make sure the percentage passed never exceeds the max
         if (percent > 100) {
             percent = 100
