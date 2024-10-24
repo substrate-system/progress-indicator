@@ -10,14 +10,6 @@ export class ProgressIndicator extends HTMLElement {
         const radius:number = this.radius = (this.viewBox / 2)
         const normalisedRadius = radius - this.stroke
         this.calculatedCircumference = normalisedRadius * 2 * Math.PI
-
-        // Set the custom property viewbox value for our CSS to latch on to
-        this.style.setProperty('--progress-indicator-viewbox', `${this.viewBox}px`)
-
-        // Set the default aria role states
-        this.setAttribute('aria-label', this.label)
-        this.setAttribute('role', 'progressbar')
-        this.setAttribute('aria-valuemax', '100')
     }
 
     static get observedAttributes () {
@@ -49,6 +41,13 @@ export class ProgressIndicator extends HTMLElement {
 
     connectedCallback () {
         const normalisedRadius = this.radius - this.stroke
+        // Set the custom property viewbox value for our CSS to latch on to
+        this.style.setProperty('--progress-indicator-viewbox', `${this.viewBox}px`)
+
+        // Set the default aria role states
+        this.setAttribute('aria-label', this.label)
+        this.setAttribute('role', 'progressbar')
+        this.setAttribute('aria-valuemax', '100')
 
         // Render the component with all the data ready
         this.innerHTML = `
