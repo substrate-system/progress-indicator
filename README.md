@@ -90,7 +90,7 @@ your HTML.
 
 ```js
 import '@substrate-system/progress-indicator'
-import '@substrate-system/progress-indicator/index.css'
+import '@substrate-system/progress-indicator/css'
 ```
 
 ### CSS
