@@ -63,7 +63,7 @@
     "tap-spec": "^5.0.0",
     "tape-run": "^11.0.0",
     "typescript": "^5.4.4",
-    "vite": "^5.2.10"
+    "vite": "^6.0.0"
   },
   "author": "nichoth <nichoth@gmail.com> (https://nichoth.com)",
   "license": "MIT",
