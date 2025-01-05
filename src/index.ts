@@ -29,7 +29,11 @@ export class ProgressIndicator extends HTMLElement {
     }
 
     get label ():string {
-        return this.getAttribute('label') || 'Current progress'
+        return (
+            this.getAttribute('label') ||
+            this.getAttribute('aria-label') ||
+            'Current progress'
+        )
     }
 
     attributeChangedCallback (name:string, _oldValue, newValue:number):void {
