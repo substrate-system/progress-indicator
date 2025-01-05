@@ -51,6 +51,7 @@ export class ProgressIndicator extends HTMLElement {
         this.setAttribute('aria-label', this.label)
         this.setAttribute('role', 'progressbar')
         this.setAttribute('aria-valuemax', '100')
+        this.removeAttribute('label')  // not HTML
 
         // Render the component with all the data ready
         this.innerHTML = `
