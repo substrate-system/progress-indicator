@@ -95,7 +95,12 @@ export class ProgressIndicator extends HTMLElement {
                 </svg>
             </div>
         </div>
-      `
+        `
+
+        // so there is no flash of incorrect progress
+        const circle = this.querySelector('[data-progress-circle]') as HTMLElement
+        circle.style.strokeDashoffset = '' + (this.calculatedCircumference -
+            (0 / 100) * this.calculatedCircumference)
     }
 
     setProgress (_percent:number|string) {
@@ -118,7 +123,7 @@ export class ProgressIndicator extends HTMLElement {
         const progressCount = this.querySelector('[data-progress-count]') as
             HTMLElement
 
-        if (!circle) {
+        if (!circle) {  // if we have not rendered yet
             return setTimeout(() => {
                 this.setProgress(percent)
             }, 0)
