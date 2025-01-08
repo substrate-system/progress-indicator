@@ -1,6 +1,6 @@
 {
   "name": "@substrate-system/progress-indicator",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "type": "module",
   "description": "Progress indicator implemented as a web component",
   "directories": {
