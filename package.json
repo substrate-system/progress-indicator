@@ -49,13 +49,13 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@bicycle-codes/tapzero": "^0.10.0",
-    "@nichoth/debug": "^0.6.7",
+    "@substrate-system/tapzero": "^0.10.13",
+    "@substrate-system/debug": "^0.7.18",
     "@preact/preset-vite": "^2.8.2",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "auto-changelog": "^2.4.0",
-    "esbuild": "^0.24.0",
+    "esbuild": "^0.25.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "postcss-nesting": "^13.0.0",
@@ -63,7 +63,7 @@
     "tap-spec": "^5.0.0",
     "tape-run": "^11.0.0",
     "typescript": "^5.4.4",
-    "vite": "^6.0.1"
+    "vite": "^6.1.0"
   },
   "author": "nichoth <nichoth@gmail.com> (https://nichoth.com)",
   "license": "SEE LICENSE IN LICENSE",

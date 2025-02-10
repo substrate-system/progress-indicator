@@ -1,4 +1,4 @@
-import { test } from '@bicycle-codes/tapzero'
+import { test } from '@substrate-system/tapzero'
 import { ProgressIndicator } from '../src/index.js'
 
 let el:ProgressIndicator
