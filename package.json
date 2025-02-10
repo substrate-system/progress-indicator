@@ -1,6 +1,6 @@
 {
   "name": "@substrate-system/progress-indicator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Progress indicator implemented as a web component",
   "directories": {
@@ -47,22 +47,22 @@
       ]
     }
   },
-  "dependencies": {},
   "devDependencies": {
-    "@substrate-system/tapzero": "^0.10.13",
+    "@preact/preset-vite": "^2.10.1",
     "@substrate-system/debug": "^0.7.18",
-    "@preact/preset-vite": "^2.8.2",
+    "@substrate-system/tapzero": "^0.10.13",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "auto-changelog": "^2.4.0",
     "esbuild": "^0.25.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
+    "markdown-toc": "^1.2.0",
     "postcss-nesting": "^13.0.0",
-    "preact": "^10.20.2",
+    "preact": "^10.25.4",
     "tap-spec": "^5.0.0",
     "tape-run": "^11.0.0",
-    "typescript": "^5.4.4",
+    "typescript": "^5.7.3",
     "vite": "^6.1.0"
   },
   "author": "nichoth <nichoth@gmail.com> (https://nichoth.com)",
