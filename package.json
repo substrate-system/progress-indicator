@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.1",
-    "@substrate-system/debug": "^0.7.18",
+    "@substrate-system/debug": "^0.9.0",
     "@substrate-system/tapzero": "^0.10.13",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
