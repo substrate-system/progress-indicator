@@ -80,7 +80,7 @@ import { outerHTML } from '@substrate-system/progress-indicator/ssr'
 
 // outerHTML takes the standard attributes
 
-const myString `
+const myString = `
   <div id=root>
     ${outerHTML({ progress: 25 })}
   </div>
