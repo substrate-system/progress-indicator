@@ -1,6 +1,8 @@
 import { test } from '@substrate-system/tapzero'
 import { ProgressIndicator } from '../src/index.js'
 
+ProgressIndicator.define()
+
 let el:ProgressIndicator
 test('Find the element', async t => {
     el = document.querySelector('progress-indicator') as ProgressIndicator

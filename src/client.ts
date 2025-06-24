@@ -67,10 +67,8 @@ export class ProgressIndicator extends HTMLElement {
 
         // so there is no flash of incorrect progress
         const circle = this.querySelector('[data-progress-circle]') as HTMLElement
-        console.log('connected', this.calculatedCircumference)
         const value = '' + (this.calculatedCircumference -
             (0 / 100) * this.calculatedCircumference)
-        console.log('new value', value)
         circle.style.strokeDashoffset = value
     }
 
