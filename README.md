@@ -45,6 +45,12 @@ See [the demonstration](https://substrate-system.github.io/progress-indicator/).
 
 This takes an attribute `progress`, which is a percent number from 0 - 100.
 
+```js
+import { ProgressIndicator } from '@substrate-system/progress-indicator'
+
+ProgressIndicator.define()
+```
+
 ```html
 <progress-indicator progress="10">
   <div role="alert" aria-live="polite">
