@@ -75,6 +75,7 @@ export function outerHTML (attrs:Attrs) {
         aria-valuenow="${percent || 0}"
         aria-label="${label}"
         aria-valuemax="100"
+        progress="${percent || 0}"
         role="progressbar"
     >
         ${html(attrs)}
