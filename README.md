@@ -135,7 +135,7 @@ And now you can use the tag in your markup:
 ```
 
 ### Bundle
-If you are using a tool such as `vite`, you can just import, then use in
+If you are using a tool such as `vite`, just import, then use in
 your HTML.
 
 #### Include the full version
