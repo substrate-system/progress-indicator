@@ -1,8 +1,4 @@
-import { ProgressIndicator } from '../src/index.js'
-import '../src/index.css'
-
-ProgressIndicator.define()
-
+// The component should be "hydrated", b/c the HTML file includes the umd script
 let progress = 0
 const indicator = document.querySelector('progress-indicator')
 

@@ -15,16 +15,22 @@
   "scripts": {
     "lint": "eslint \"./**/*.{ts,js}\"",
     "build-tests": "esbuild test/index.ts --target=es2020 --bundle --keep-names > test/test-bundle.js",
+    "build-example:ssr": "npm run build && npm run build-example:ssr:examplejs && npm run build-css:min && cp ./dist/index.min.css ./example/ssr/index.css && cp ./dist/umd.min.js ./example/ssr/ && esbuild --bundle --format=esm --platform=node ./example/ssr/ssr.ts | node --input-type=module",
+    "build-example:ssr:examplejs": "esbuild --bundle ./example/ssr/index.ts > example/ssr/index.js",
+    "serve-example:ssr": "ecstatic ./example/ssr",
+    "example": "npm run build-example:ssr && npm run serve-example:ssr",
     "test": "npm run lint && npm run build && npm run build-tests && npm run test-tape-run",
     "test-tape-run": "cat test/index.html | tape-run --input=html --static=test | tap-spec",
     "build-cjs": "esbuild src/*.ts --format=cjs --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --out-extension:.js=.cjs --sourcemap=inline",
     "build-cjs:min": "esbuild src/*.ts --format=cjs --minify --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --out-extension:.js=.min.cjs --sourcemap",
     "build-esm": "tsc --project tsconfig.build.json",
-    "build-umd": "esbuild ./src/umd.ts --bundle --format=iife --keep-names --minify --tsconfig=tsconfig.build.json --outfile=./dist/umd.js",
+    "build-umd": "esbuild ./src/umd.ts --bundle --format=iife --keep-names --tsconfig=tsconfig.build.json --outfile=./dist/umd.js",
+    "build-umd:min": "esbuild ./src/umd.ts --minify --bundle --format=iife --keep-names --tsconfig=tsconfig.build.json --outfile=./dist/umd.min.js",
     "build-esm:min": "esbuild ./src/*.ts --format=esm --keep-names --bundle --tsconfig=tsconfig.build.json --minify --out-extension:.js=.min.js --outdir=./dist --sourcemap",
     "build-example": "mkdir -p ./public && rm -rf ./public/* && vite build --base=./",
-    "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm && npm run build-css && npm run build-esm:min && npm run build-cjs:min",
+    "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm && npm run build-css && npm run build-esm:min && npm run build-cjs:min && npm run build-css && npm run build-css:min && npm run build-umd && npm run build-umd:min",
     "build-css": "cp ./src/index.css ./dist",
+    "build-css:min": "lightningcss --minify --bundle --targets \">= 0.25%\" src/index.css -o dist/index.min.css",
     "start": "vite",
     "toc": "markdown-toc --maxdepth 3 -i README.md",
     "preversion": "npm run lint",
@@ -39,6 +45,19 @@
     },
     "./*.css": "./dist/index.css",
     "./css": "./dist/index.css",
+    "./css/min": "./dist/index.min.css",
+    "./umd": {
+      "import": "./dist/umd.js",
+      "require": "./dist/umd.cjs"
+    },
+    "./min": {
+      "import": "./dist/index.min.js",
+      "require": "./dist/index.min.cjs"
+    },
+    "./min/*": {
+      "import": "./dist/*.min.js",
+      "require": "./dist/*.min.cjs"
+    },
     "./*": {
       "import": [
         "./dist/*.js",
@@ -60,11 +79,14 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "auto-changelog": "^2.4.0",
+    "browserslist": "^4.25.0",
+    "ecstatic": "^4.1.4",
     "esbuild": "^0.25.5",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
+    "lightningcss": "^1.30.1",
+    "lightningcss-cli": "^1.30.1",
     "markdown-toc": "^1.2.0",
-    "postcss-nesting": "^13.0.0",
     "preact": "^10.25.4",
     "tap-spec": "^5.0.0",
     "tape-run": "^11.0.0",

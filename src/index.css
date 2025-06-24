@@ -4,7 +4,6 @@
     --color-dark: #1f1a38;
     --color-dark-glare: #989ea9;
     --color-success: #76f7bf;
-  
     --progress-indicator-color-complete: var(--color-success);
     --progress-indicator-progress-stroke: var(--color-dark);
     --progress-indicator-bg-stroke: var(--color-dark-glare);

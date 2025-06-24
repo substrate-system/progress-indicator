@@ -6,8 +6,8 @@ import { ProgressIndicator as ClientProgressIndicator } from './client.js'
  */
 export class ProgressIndicator extends ClientProgressIndicator {
     connectedCallback () {
-        super.connectedCallback()
         this.render()
+        super.connectedCallback()
     }
 
     render () {

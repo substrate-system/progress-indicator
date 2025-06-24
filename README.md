@@ -20,13 +20,13 @@ See [an article on piccalil.li/blog](https://piccalil.li/blog/solution-009-progr
 
 <!-- tocstop -->
 
-## install
+## Install
 
 ```sh
 npm i -S @substrate-system/progress-indicator
 ```
 
-## example
+## Example
 See [./example/index.html](./example/index.html).
 
 See [the demonstration](https://substrate-system.github.io/progress-indicator/).
@@ -45,7 +45,7 @@ This takes an attribute `progress`, which is a percent number from 0 - 100.
 </progress-indicator>
 ```
 
-## use
+## Use
 
 ### JS
 
@@ -116,4 +116,20 @@ your javascript.
 
 ```js
 import '@substrate-system/progress-indicator/index.css'
+```
+
+## develop
+
+Start a localhost server of the `./example` directory.
+
+```sh
+npm start
+```
+
+### SSR
+
+Render the component in a server, then serve the static HTML file:
+
+```sh
+npm run example
 ```
