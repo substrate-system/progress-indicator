@@ -13,11 +13,18 @@ See [an article on piccalil.li/blog](https://piccalil.li/blog/solution-009-progr
 
 <!-- toc -->
 
-- [install](#install)
-- [example](#example)
-- [use](#use)
-  * [JS](#js)
+- [Install](#install)
+- [Example](#example)
+- [Use](#use)
+  * [render server-side](#render-server-side)
+  * [No build tools](#no-build-tools)
+  * [Bundle](#bundle)
   * [CSS](#css)
+  * [No build tools](#no-build-tools-1)
+  * [link in HTML](#link-in-html)
+  * [Bundler](#bundler)
+- [develop](#develop)
+  * [SSR](#ssr)
 
 <!-- tocstop -->
 
