@@ -8,3 +8,5 @@ public
 example/ssr/index.html
 example/ssr/index.css
 example/ssr/umd.min.js
+example/ssr/*.js
+example/*.js
