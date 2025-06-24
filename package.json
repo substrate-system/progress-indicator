@@ -18,9 +18,12 @@
     "test": "npm run lint && npm run build && npm run build-tests && npm run test-tape-run",
     "test-tape-run": "cat test/index.html | tape-run --input=html --static=test | tap-spec",
     "build-cjs": "esbuild src/*.ts --format=cjs --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --out-extension:.js=.cjs --sourcemap=inline",
+    "build-cjs:min": "esbuild src/*.ts --format=cjs --minify --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --out-extension:.js=.min.cjs --sourcemap",
     "build-esm": "tsc --project tsconfig.build.json",
+    "build-umd": "esbuild ./src/umd.ts --bundle --format=iife --keep-names --minify --tsconfig=tsconfig.build.json --outfile=./dist/umd.js",
+    "build-esm:min": "esbuild ./src/*.ts --format=esm --keep-names --bundle --tsconfig=tsconfig.build.json --minify --out-extension:.js=.min.js --outdir=./dist --sourcemap",
     "build-example": "mkdir -p ./public && rm -rf ./public/* && vite build --base=./",
-    "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm && npm run build-css",
+    "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm && npm run build-css && npm run build-esm:min && npm run build-cjs:min",
     "build-css": "cp ./src/index.css ./dist",
     "start": "vite",
     "toc": "markdown-toc --maxdepth 3 -i README.md",
@@ -47,6 +50,9 @@
       ]
     }
   },
+  "dependencies": {
+    "@substrate-system/web-component": "^0.0.25"
+  },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.1",
     "@substrate-system/debug": "^0.9.0",
@@ -54,7 +60,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "auto-changelog": "^2.4.0",
-    "esbuild": "^0.25.0",
+    "esbuild": "^0.25.5",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
     "markdown-toc": "^1.2.0",
