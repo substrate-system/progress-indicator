@@ -4,7 +4,7 @@
 [![types](https://img.shields.io/npm/types/@substrate-system/progress-indicator?style=flat-square)](README.md)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
-[![install size](https://packagephobia.com/badge?p=@substrate-system/scroll-progress)](https://packagephobia.com/result?p=@substrate-system/scroll-progress)
+[![install size](https://flat.badgen.net/packagephobia/install/@substrate-system/progress-indicator?cache-control=no-cache)](https://packagephobia.com/result?p=@substrate-system/progress-indicator)
 [![gzip size](https://img.shields.io/bundlephobia/minzip/@substrate-system/progress-indicator?style=flat-square)](https://bundlephobia.com/package/@substrate-system/progress-indicator)
 [![license](https://img.shields.io/badge/license-Polyform_Non_Commercial-26bc71?style=flat-square)](LICENSE)
 
