@@ -46,6 +46,7 @@ This takes an attribute `progress`, which is a percent number from 0 - 100.
 
 ```js
 import { ProgressIndicator } from '@substrate-system/progress-indicator'
+import '@substrate-system/progress-indicator/css'
 
 ProgressIndicator.define()
 ```
