@@ -70,7 +70,6 @@ export function outerHTML (attrs:Attrs) {
     const label = attrs.label || 'Current progress'
     const percent = attrs.progress || 0
 
-    // this.setAttribute('aria-valuemax', '100')
     return `<progress-indicator
         aria-valuenow="${percent || 0}"
         aria-label="${label}"

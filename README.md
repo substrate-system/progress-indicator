@@ -10,6 +10,8 @@
 
 See [an article on piccalil.li/blog](https://piccalil.li/blog/solution-009-progress-indicator)
 
+<details><summary><h2>Contents</h2></summary>
+
 <!-- toc -->
 
 - [Install](#install)
@@ -26,6 +28,8 @@ See [an article on piccalil.li/blog](https://piccalil.li/blog/solution-009-progr
   * [SSR](#ssr)
 
 <!-- tocstop -->
+
+</details>
 
 ## Install
 
