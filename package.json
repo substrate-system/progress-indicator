@@ -75,7 +75,7 @@
     }
   },
   "dependencies": {
-    "@substrate-system/web-component": "^0.0.28"
+    "@substrate-system/web-component": "^0.0.35"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.1",
