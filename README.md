@@ -5,30 +5,13 @@
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
 [![install size](https://flat.badgen.net/packagephobia/install/@substrate-system/progress-indicator?cache-control=no-cache)](https://packagephobia.com/result?p=@substrate-system/progress-indicator)
 [![gzip size](https://img.shields.io/bundlephobia/minzip/@substrate-system/progress-indicator?style=flat-square)](https://bundlephobia.com/package/@substrate-system/progress-indicator)
-[![license](https://img.shields.io/badge/license-Polyform_Non_Commercial-26bc71?style=flat-square)](LICENSE)
+[![license](https://img.shields.io/badge/license-Big_Time-blue?style=flat-square)](LICENSE)
 
 
 See [an article on piccalil.li/blog](https://piccalil.li/blog/solution-009-progress-indicator)
 
 <details><summary><h2>Contents</h2></summary>
-
 <!-- toc -->
-
-- [Install](#install)
-- [Example](#example)
-- [Use](#use)
-  * [render server-side](#render-server-side)
-  * [No build tools](#no-build-tools)
-  * [Bundle](#bundle)
-  * [CSS](#css)
-  * [No build tools](#no-build-tools-1)
-  * [link in HTML](#link-in-html)
-  * [Bundler](#bundler)
-- [develop](#develop)
-  * [SSR](#ssr)
-
-<!-- tocstop -->
-
 </details>
 
 ## Install
