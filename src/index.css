@@ -54,11 +54,25 @@
 [data-progress-state="complete"] .progress-indicator__progress-circle {
     fill: var(--progress-indicator-color-complete);
 }
-  
+
 [data-progress-state="complete"] .progress-indicator__count {
     display: none;
 }
-  
+
 [data-progress-state="complete"] .progress-indicator__check {
     display: revert;
+}
+
+/*
+ * Utility class to hide content visually while keeping it
+ * screen reader-accessible.
+ * Source: https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html
+ */
+.visually-hidden:not(:focus, :active) {
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }

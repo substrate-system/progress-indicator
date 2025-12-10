@@ -28,6 +28,6 @@ test('set the attribute', t => {
 })
 
 test('all done', () => {
-    // @ts-expect-error
+    // @ts-expect-error tests
     window.testsFinished = true
 })
