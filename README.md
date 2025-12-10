@@ -11,7 +11,24 @@
 See [an article on piccalil.li/blog](https://piccalil.li/blog/solution-009-progress-indicator)
 
 <details><summary><h2>Contents</h2></summary>
+
 <!-- toc -->
+
+- [Install](#install)
+- [Example](#example)
+- [Use](#use)
+  * [render server-side](#render-server-side)
+  * [No build tools](#no-build-tools)
+  * [Bundle](#bundle)
+  * [CSS](#css)
+  * [No build tools](#no-build-tools-1)
+  * [link in HTML](#link-in-html)
+  * [Bundler](#bundler)
+- [develop](#develop)
+  * [SSR](#ssr)
+
+<!-- tocstop -->
+
 </details>
 
 ## Install
