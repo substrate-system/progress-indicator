@@ -22,6 +22,7 @@
     "test:node": "esbuild ./test/node.ts --bundle --platform=node | node",
     "test": "npm run build && npm run test:node && npm run test:browser",
     "test:browser": "esbuild ./test/index.ts --bundle | tapout",
+    "test:a11y": "playwright test --output=\"\"",
     "build-cjs": "esbuild src/*.ts --format=cjs --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --out-extension:.js=.cjs --sourcemap=inline",
     "build-cjs:min": "esbuild src/*.ts --format=cjs --minify --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --out-extension:.js=.min.cjs --sourcemap",
     "build-esm": "tsc --project tsconfig.build.json",
@@ -59,29 +60,28 @@
       "import": "./dist/index.min.js",
       "require": "./dist/index.min.cjs"
     },
+    "./min/css": "./dist/index.min.css",
     "./min/*": {
       "import": "./dist/*.min.js",
       "require": "./dist/*.min.cjs"
     },
     "./*": {
-      "import": [
-        "./dist/*.js",
-        "./dist/*"
-      ],
-      "require": [
-        "./dist/*.cjs",
-        "./dist/*"
-      ]
+      "import": "./dist/*.js",
+      "require": "./dist/*.cjs"
     }
   },
   "dependencies": {
+    "@substrate-system/a11y": "^0.0.17",
     "@substrate-system/web-component": "^0.0.38"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "@playwright/test": "^1.57.0",
     "@preact/preset-vite": "^2.10.1",
     "@substrate-system/debug": "^0.9.32",
     "@substrate-system/tapout": "^0.0.30",
     "@substrate-system/tapzero": "^0.10.16",
+    "@types/node": "^25.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "auto-changelog": "^2.4.0",
@@ -90,6 +90,7 @@
     "esbuild": "^0.27.1",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
+    "http-server": "^14.1.1",
     "lightningcss": "^1.30.1",
     "lightningcss-cli": "^1.30.1",
     "markdown-toc": "^1.2.0",

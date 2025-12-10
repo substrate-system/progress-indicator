@@ -62,6 +62,7 @@ export class ProgressIndicator extends HTMLElement {
         // Set the default aria role states
         this.setAttribute('aria-label', this.label)
         this.setAttribute('role', 'progressbar')
+        this.setAttribute('aria-valuemin', '0')
         this.setAttribute('aria-valuemax', '100')
         this.removeAttribute('label')
 
@@ -91,6 +92,8 @@ export class ProgressIndicator extends HTMLElement {
             HTMLElement
         const progressCount = this.querySelector('[data-progress-count]') as
             HTMLElement
+        const announcement = this.querySelector('[data-progress-announcement]') as
+            HTMLElement
 
         if (!circle) {  // if we have not rendered yet
             return setTimeout(() => {
@@ -106,6 +109,11 @@ export class ProgressIndicator extends HTMLElement {
 
         // A human readable version for the text label
         progressCount.innerText = `${percent}%`
+
+        // Update screen reader announcement
+        if (announcement) {
+            announcement.innerText = percent === 100 ? 'Complete' : `${percent} percent`
+        }
 
         // Set a complete or pending state based on progress
         if (percent === 100) {

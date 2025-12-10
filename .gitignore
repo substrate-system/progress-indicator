@@ -10,3 +10,5 @@ example/ssr/index.css
 example/ssr/umd.min.js
 example/ssr/*.js
 example/*.js
+.claude
+test-results

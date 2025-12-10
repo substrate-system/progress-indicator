@@ -21,28 +21,31 @@ export function html (attrs:Attrs):string {
     const strokeDashoffset = '' + (calculatedCircumference -
         (percent / 100) * calculatedCircumference)
 
+    const progressText = percent === 100 ? 'Complete' : `${percent} percent`
+
     return `<div class="progress-indicator" style="--progress-indicator-viewbox: ${viewBox}px;">
         <div class="progress-indicator__visual">
             <div data-progress-count class="progress-indicator__count">
                 ${percent}%
             </div>
 
-            <svg 
-                fill="none" 
+            <svg
+                fill="none"
                 viewBox="0 0 ${viewBox} ${viewBox}"
                 width="${viewBox}"
                 height="${viewBox}"
                 focusable="false"
+                aria-hidden="true"
                 class="progress-indicator__circle"
             >
-                <circle 
+                <circle
                     r="${normalisedRadius}"
                     cx="${radius}"
                     cy="${radius}"
                     stroke-width="${stroke}"
                     class="progress-indicator__background-circle"
                 />
-                <circle 
+                <circle
                     r="${normalisedRadius}"
                     cx="${radius}"
                     cy="${radius}"
@@ -54,14 +57,19 @@ export function html (attrs:Attrs):string {
                 />
             </svg>
 
-            <svg 
+            <svg
                 class="progress-indicator__check"
-                focusable="false" 
-                viewBox="0 0 20 20" 
+                focusable="false"
+                aria-hidden="true"
+                viewBox="0 0 20 20"
                 fill="none"
             >
                 <path d="m8.335 12.643 7.66-7.66 1.179 1.178L8.334 15 3.032 9.697 4.21 8.518l4.125 4.125Z" fill="currentColor" />
             </svg>
+        </div>
+
+        <div class="visually-hidden" role="status" aria-live="polite" data-progress-announcement>
+            ${progressText}
         </div>
     </div>`
 }
@@ -73,6 +81,7 @@ export function outerHTML (attrs:Attrs) {
     return `<progress-indicator
         aria-valuenow="${percent || 0}"
         aria-label="${label}"
+        aria-valuemin="0"
         aria-valuemax="100"
         progress="${percent || 0}"
         role="progressbar"
